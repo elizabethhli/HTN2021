@@ -13,6 +13,11 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
+const usersRoute = require("./routes/users");
+
+app.use('/api/users', usersRoute);
+
+
 app.listen(5001, () =>{
     console.log("Listening on port 5001");
 })
