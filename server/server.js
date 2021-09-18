@@ -12,7 +12,7 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors());
-gi
+
 app.listen(5001, () =>{
     console.log("Listening on port 5001");
 })
