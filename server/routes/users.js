@@ -24,4 +24,33 @@ router.get('/', (req, res) => {
 
 });
 
+router.post('/', (req, res) => {
+
+    let {email, password, name, program, year, picture, introduction, hobbies, interests} = req.body;
+
+    admin.auth().createUser({
+        email: email,
+        password: password,
+        name: name,
+        program: program, 
+        year: year,
+        picture: picture,
+        introduction: introduction,
+        interests: interests,
+        hobbies: hobbies
+    })
+    .then((newUser)=> {
+        usersRef.add((JSON.parse(JSON.stringify(newUser))))
+        .then(()=> {
+            res.status(200).send("User successfully added");
+        })
+        .catch(err => {
+            console.log(err);
+            console.log("User Already exists");        
+        })
+    })
+
+
+});
+
 module.exports = router;
