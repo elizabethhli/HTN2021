@@ -66,7 +66,9 @@ export default function Signup() {
               </div>
   
               <Box justify="between" margin={{ top: 'medium' }} pad="large" align="center">
-                <Button type="submit" label="Sign Up" primary disabled={loading}/>
+                <Link to = "/dashboard"> 
+                  <Button type="submit" label="Sign Up" primary disabled={loading}/>
+                </Link>
               </Box>
             </Form>
           </Box>
