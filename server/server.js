@@ -13,10 +13,10 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-const authRoute = require("./routes/auth");
+
 const usersRoute = require("./routes/users");
 
-app.use('/api/auth', authRoute);
+
 app.use('/api/users', usersRoute);
 
 
