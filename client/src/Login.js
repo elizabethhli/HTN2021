@@ -60,7 +60,9 @@ export default function Login() {
               </div>
   
               <Box justify="between" margin={{ top: 'medium' }} pad="large" align="center">
-                <Button type="submit" label="Log In" primary onClick="/"/>
+                <Link to = "/dashboard"> 
+                  <Button type="submit" label="Log In" primary onClick="/"/>
+                </Link>
               </Box>
             </Form>
           </Box>
