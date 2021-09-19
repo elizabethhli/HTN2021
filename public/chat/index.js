@@ -38,7 +38,7 @@ $(function() {
   }
 
   // Alert the user they have been assigned a random username
-  print('Logging in...');
+  print('Write a message...');
 
   // Get an access token for the current user, passing a username (identity)
   $.getJSON('/token', function(data) {
@@ -62,8 +62,8 @@ $(function() {
 
     // Alert the user they have been assigned a random username
     username = data.identity;
-    print('You have been assigned a random username of: '
-    + '<span class="me">' + username + '</span>', true);
+    // print('You have been assigned a random username of: '
+    // + '<span class="me">' + username + '</span>', true);
 
     }).catch(error => {
       console.error(error);
@@ -85,7 +85,7 @@ $(function() {
   function createOrJoinGeneralChannel() {
     // Get the general chat channel, which is where all the messages are
     // sent in this simple application
-    print('Attempting to join "general" chat channel...');
+    // print('Attempting to join "general" chat channel...');
     chatClient.getChannelByUniqueName('general')
     .then(function(channel) {
       generalChannel = channel;
@@ -114,8 +114,8 @@ $(function() {
   function setupChannel() {
     // Join the general channel
     generalChannel.join().then(function(channel) {
-      print('Joined channel as '
-      + '<span class="me">' + username + '</span>.', true);
+     // print('Joined channel as '
+     // + '<span class="me">' + username + '</span>.', true);
     });
 
     // Listen for new messages sent to the channel
