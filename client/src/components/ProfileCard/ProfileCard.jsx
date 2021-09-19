@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Card, CardBody, Grommet, Image, Box, Heading, Paragraph, CardFooter, Anchor, Button} from 'grommet';
 import {Chat} from 'grommet-icons';
 import { grommet } from 'grommet/themes';
+import { Link } from 'react-router-dom';
 
 const theme = {
     card:{
@@ -66,7 +67,7 @@ const ProfileCard = (props) => {
                 <CardFooter>
                     <Box direction="row" align="center" gap="small">
                     <Button>
-                        <Link to = "https://connect-first-search-twilio.netlify.app/chat/">
+                        <Link to = {{ pathname: "https://connect-first-search-twilio.netlify.app/chat/" }}  target="_blank">
                         <Chat/>
                         </Link> 
                     </Button>
