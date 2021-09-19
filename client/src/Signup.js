@@ -6,6 +6,9 @@ import {
     Form,
     FormField,
     TextInput,
+    TextArea,
+    FileInput,
+    Text
   } from 'grommet';
   import { grommet } from 'grommet/themes';
   import { useAuth } from './AuthContext';
@@ -60,6 +63,37 @@ export default function Signup() {
               <FormField label="Confirm Password" name="passwordConfirm" required>
                 <TextInput name="PasswordConfirm" type="password" ref={passwordConfirmRef}/>
               </FormField>
+
+              <FormField label="Program " name="program" required>
+                <TextInput name="Program" type="text"/>
+              </FormField>
+
+              <FormField label="Year " name="year" required>
+                <TextInput name="Year" type="number"/>
+              </FormField>
+
+              <FormField label="Interests " name="interests" required>
+                <TextInput name="Interests" type="text"/>
+              </FormField>
+
+              <FormField label="Hobbies " name="hobbies" required>
+                <TextInput name="Hobbies" type="text"/>
+              </FormField>
+
+              <FormField label="Introduction" name="introduction">
+                <TextArea name="introduction" />
+              </FormField>
+
+              <Text> Upload Profile Picture</Text>
+              <FileInput
+                name="file"
+                onChange={event => {
+                  const fileList = event.target.files;
+                  for (let i = 0; i < fileList.length; i += 1) {
+                    const file = fileList[i];
+                  }
+                }}
+              />
   
               <div className="w-100 text-center mt-2"> 
                 Already have an account? <Link to="/login">Log In.</Link>
