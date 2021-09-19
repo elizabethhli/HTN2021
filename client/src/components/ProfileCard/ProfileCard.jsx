@@ -66,7 +66,9 @@ const ProfileCard = (props) => {
                 <CardFooter>
                     <Box direction="row" align="center" gap="small">
                     <Button>
+                        <Link to = "https://connect-first-search-twilio.netlify.app/chat/">
                         <Chat/>
+                        </Link> 
                     </Button>
                     </Box>
                 </CardFooter>
